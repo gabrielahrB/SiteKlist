@@ -1,0 +1,221 @@
+ /* font importing */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+ 
+ /*Configuração da tela quando ela estiver em deskt*/
+ @media screen and (min-width: 600px) {
+    /*Definições corpo da página*/
+          body{
+            background: url('../img/ImagemFundo.jpg') center center no-repeat fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Inter', sans-serif;
+            
+      }
+           /*Para não aparecer a sidenav quando a tela estiver em desk*/
+          .sidenav {
+            display: none;
+          }
+    /*Para não aparecer a sidenav quando a tela estiver em desk*/
+          #abrir {
+            display: none;
+          }
+         /*Muda a cor de fundo das linhas da tabela que tem essa classe*/
+          tr.simples{
+          background-color: #ffffff;
+        }
+    
+        /*Quadrado que fica atrás da tabela*/
+        .batata{
+          width: 1000px;/*tamanho do quadrado*/
+          border-collapse: collapse; /*tipo de borda do quadrado*/
+          padding: 15px; /*largura do quadrado*/
+          position:static; /*posição do quadrado*/
+          margin: auto;/*para centralizar o quadrado*/
+          border-radius: 12px;/*deixa os cantos do quadrado arredondados*/
+          background-color: #ffffff; /*cor do quadrado*/
+          padding-top: 25px; /*distancia do quadrado da borda de cima*/
+          align-items: center;
+          justify-content: space-between;
+        }
+    
+        .batata .buttons{
+          display: grid;
+          grid-template-columns: 6fr 1fr;
+        }
+    
+        .batata .buttons .newUpdate{
+          border-radius: 12px;
+          background: #CEC8F6;
+          padding: 15px;
+          border: #E6E8ED;
+          cursor: pointer;
+          left: 50px;
+          margin: auto;
+          
+        }
+        .batata .buttons .delete{
+          border-radius: 12px;
+          background: #CEC8F6;
+          padding: 15px;
+          border: #E6E8ED;
+          cursor: pointer;
+          left: 50px;
+          margin: auto;
+        }
+    
+        }
+    
+        /* On screens that are 600px wide or less, the background color is olive */
+        @media screen and (max-width: 600px) {
+          body {
+            font-family: "Lato", sans-serif;
+            background: url('../img/ImagemFundo.jpg') center center no-repeat fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+            margin: auto;
+            overflow-y: scroll;
+      overflow-x: hidden;
+      font-family: 'Inter', sans-serif;
+        
+          }
+    
+          .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(#BDD1F9, #CEC8F6, #E0F5F9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+          }
+    
+          .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+            display: block;
+            transition: 0.3s;
+          }
+    
+          .sidenav a:hover {
+            color: #f1f1f1;
+          }
+    
+          .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+    
+          #main {
+            transition: margin-left .5s;
+            padding: 16px;
+          }
+    
+          @media screen and (max-height: 450px) {
+            .sidenav {
+              padding-top: 15px;
+            }
+    
+            .sidenav a {
+              font-size: 18px;
+            }
+          }
+    
+           /*Quadrado que fica atrás da tabela*/
+        .batata{
+          width: 1000px;/*tamanho do quadrado*/
+          border-collapse: collapse; /*tipo de borda do quadrado*/
+          padding: 15px; /*largura do quadrado*/
+          position:static; /*posição do quadrado*/
+          margin: auto;/*para centralizar o quadrado*/
+          border-radius: 12px;/*deixa os cantos do quadrado arredondados*/
+          background-color: #ffffff; /*cor do quadrado*/
+          padding-top: 25px; /*distancia do quadrado da borda de cima*/
+          align-items: center;
+          justify-content: space-between;
+        }
+    
+        .newUpdate{
+          border-radius: 12px;
+          background: #CEC8F6;
+          padding: 15px;
+          border: #E6E8ED;
+          cursor: pointer;
+        
+          
+        }
+        .delete{
+          border-radius: 12px;
+          background: #CEC8F6;
+          padding: 15px;
+          border: #f1f1f1;
+          cursor: pointer;
+        }
+        }
+    
+        /*CSS da tabela*/
+        /*Configurações da tabela*/
+        table {
+          width: 1000px;
+          border-collapse: collapse;
+          padding: auto;
+          margin: auto;
+          border-radius: 50px;
+          
+        }
+    
+    
+    
+        td {
+          padding: 20px;
+          border: 1px solid #dad1d1;
+          text-align: left;
+          padding: 8px;
+        }
+    
+        tr.first {
+          background-color: #C8D3E9;
+          color: #5F6776;
+    
+        }
+    
+        tr.colorido {
+          color: #000000;
+          background-color: #E6E8ED;
+    
+        }
+    
+        tr.simples{
+          background-color: #ffffff;
+        }
+    
+        td .apagar {
+          justify-items: center;
+          justify-content: center;
+          justify-self: center;
+          align-items: center;
+          align-self: center
+        }
+    
+        .apagar{
+          color: rgb(0, 0, 0);
+          background-color: rgb(223, 116, 116);
+          border-radius: 12px;
+          border: none;
+          width: 45%;
+          text-align: center;
+        }
+    
+        /*final tabelas*/
+        /*Fnal CSS da tabela*/

@@ -1,0 +1,354 @@
+/* font importing */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+/*Configuração da tela quando ela estiver em deskt*/
+@media screen and (min-width: 600px) {
+/*Definições corpo da página*/
+  body{
+    background: url('../img/ImagemFundo.jpg') center center no-repeat fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+font-family: 'Inter', sans-serif;
+    
+}
+
+/*Botão das matérias*/
+.button-container {
+  display: flex; /* Define o contêiner como flexível */
+}
+
+.button-container .button {
+  margin-right: 10px; /* Define a margem entre os botões */
+}
+/*para a imagem mecher quando passar o mouse*/
+.button:hover img{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*final botão matérias*/
+
+.newUpdate{
+  border-radius: 12px;
+  background: #CEC8F6;
+  padding: 15px;
+  border: #E6E8ED;
+  cursor: pointer;
+  left: 50px;
+  margin: auto;
+}
+   /*Para não aparecer a sidenav quando a tela estiver em desk*/
+  .sidenav {
+    display: none;
+  }
+
+  .name{
+    display: none;
+  }
+  
+/*Para não aparecer a sidenav quando a tela estiver em desk*/
+  #abrir {
+    display: none;
+  }
+ /*Muda a cor de fundo das linhas da tabela que tem essa classe*/
+  tr.simples{
+  background-color: #ffffff;
+}
+
+/*Quadrado que fica atrás da tabela*/
+.batata{
+  width: 1000px;/*tamanho do quadrado*/
+  border-collapse: collapse; /*tipo de borda do quadrado*/
+  padding: 15px; /*largura do quadrado*/
+  position:static; /*posição do quadrado*/
+  margin: auto;/*para centralizar o quadrado*/
+  border-radius: 12px;/*deixa os cantos do quadrado arredondados*/
+  background-color: #ffffff; /*cor do quadrado*/
+  padding-top: 25px; /*distancia do quadrado da borda de cima*/
+  align-items: center;
+  justify-content: space-between;
+}
+
+.batata .buttons{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+}
+
+.batata .buttons .newUpdate{
+  border-radius: 12px;
+  background: #CEC8F6;
+  padding: 15px;
+  border: #E6E8ED;
+  cursor: pointer;
+  left: 50px;
+  margin: auto;
+  
+}
+.batata .buttons .delete{
+  border-radius: 12px;
+  background: #CEC8F6;
+  padding: 15px;
+  border: #E6E8ED;
+  cursor: pointer;
+  left: 50px;
+  margin: auto;
+}
+
+/*Janela pop-up newUpdate*/
+.popup {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffa5; /* Fundo semi-transparente */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(221deg, rgba(229,255,254,1) 0%, rgba(246,237,255,1) 47%, rgba(213,248,255,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.form-group input[type="submit"],
+.form-group input[type="button"] {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+/*Final*/
+
+
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {
+    background: url('../img/ImagemFundo.jpg') center center no-repeat fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    
+
+  }
+  .button-container{
+    display: none;
+  }
+
+  .card-wrapper{
+    display: none;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(#BDD1F9, #CEC8F6, #E0F5F9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+
+  }
+
+   /*Quadrado que fica atrás da tabela*/
+.batata{
+  width: 1000px;/*tamanho do quadrado*/
+  border-collapse: collapse; /*tipo de borda do quadrado*/
+  padding: 15px; /*largura do quadrado*/
+  position:static; /*posição do quadrado*/
+  margin: auto;/*para centralizar o quadrado*/
+  border-radius: 12px;/*deixa os cantos do quadrado arredondados*/
+  background-color: #ffffff; /*cor do quadrado*/
+  padding-top: 25px; /*distancia do quadrado da borda de cima*/
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newUpdate{
+  border-radius: 12px;
+  background: #CEC8F6;
+  padding: 15px;
+  border: #E6E8ED;
+  cursor: pointer;
+
+  
+}
+.delete{
+  border-radius: 12px;
+  background: #CEC8F6;
+  padding: 15px;
+  border: #f1f1f1;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.logo-details{
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+   .logo-details i{
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    min-width: 60px;
+    text-align: center
+  }
+ .logo-details .logo_name{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+/*Janela pop-up newUpdate*/
+.popup {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffa5; /* Fundo semi-transparente */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(221deg, rgba(229,255,254,1) 0%, rgba(246,237,255,1) 47%, rgba(213,248,255,1) 100%);
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.form-group input[type="submit"],
+.form-group input[type="button"] {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+/*Final*/
+
+/*CSS da tabela*/
+/*Configurações da tabela*/
+table {
+  width: 1000px;
+  border-collapse: collapse;
+  padding: auto;
+  margin: auto;
+  border-radius: 50px;
+  
+}
+
+
+
+td {
+  padding: 20px;
+  border: 1px solid #dad1d1;
+  text-align: left;
+  padding: 8px;
+}
+
+tr.first {
+  background-color: #C8D3E9;
+  color: #5F6776;
+
+}
+
+tr.colorido {
+  color: #000000;
+  background-color: #E6E8ED;
+
+}
+
+tr.simples{
+  background-color: #ffffff;
+}
+
+
+/*Final da tabela*/
+
