@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Link pasta CSS-->
+  <link rel="stylesheet" href="css/formsNewFunc.css">
+
+  <title>Formulário de Cadastro</title>
+  <script>
+    function validarFormulario() {
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+      var confirmacaoSenha = document.getElementById("confirmacao-senha").value;
+      var btnConcluir = document.getElementById("btnConcluir");
+      var mensagemErro = document.getElementById("mensagemErro");
+      
+      if (nome !== "" && email !== "" && senha !== "" && confirmacaoSenha !== "" && senha === confirmacaoSenha) {
+        btnConcluir.disabled = false;
+        mensagemErro.style.display = "none";
+      } else {
+        btnConcluir.disabled = true;
+        mensagemErro.style.display = "block";
+      }
+    }
+    
+    function concluirCadastro() {
+      // Realiza a lógica de cadastro aqui
+      
+      // Exibe a mensagem de sucesso
+      alert("Cadastro realizado com sucesso!");
+    }
+  </script>
+</head>
+<body>
+  
+  <section class="container">
+     <header>Cadastro de novo auxiliar</header>
+     <form action="#" class="form">
+       <div class="input-box">
+    <label for="nome">*Nome:</label>
+    <input type="text" id="nome" onkeyup="validarFormulario()">
+    <br><br>
+</div>
+<div class="input-box">
+    <label for="email">*Email:</label>
+    <input type="email" id="email" onkeyup="validarFormulario()">
+    <br><br>
+</div>
+    
+<div class="input-box">
+    <label for="senha">*Senha:</label>
+    <input type="password" id="senha" onkeyup="validarFormulario()">
+    <br><br>
+</div>
+<div class="input-box">
+    <label for="confirmacao-senha">*Confirmação de Senha:</label>
+    <input type="password" id="confirmacao-senha" onkeyup="validarFormulario()">
+    <br><br>
+</div>
+    
+    <button type="button" id="btnConcluir" disabled onclick="concluirCadastro()">Concluir Cadastro</button>
+    <a href="newFunc.html">
+        <button type="button">Cancelar</button>
+    </a>
+    <br><br>
+    <p id="mensagemErro" style="display: none; color: red;">Preencha todos os campos corretamente.</p>
+  </form>
+</section>
+</body>
+</html>

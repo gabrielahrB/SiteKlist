@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/materias.css">
+
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="logo-details">
+      <a href="index.html">
+        <i class='bx bx-clipboard' style='color:#270027'  ></i>
+      </a>
+      <span class="logo_name">klist</span>
+    </div>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <a href="portugues.html">Português</a>
+    <br>
+    <a href="matematica.html">Matemática</a>
+    <br>
+    <a href="ingles.html">Inglês</a>
+    <a href="#">__________</a>
+    <br>
+    <a href="">Boletim</a>
+    <br>
+    <a href="">Gráfico</a>
+    <br>
+    <a href="">Alunos</a>
+    <br>
+    <a href="">AudioBook</a>
+    <br>
+    <a href="">Novo funcionário</a>
+   
+
+  </div>
+
+  <div id="abrir">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  </div>
+  <br><br>
+   
+
+  <div class="batata">
+    
+  
+
+    
+  
+    <button class="newUpdate" onclick="openPopup()">newUpdate</button>
+  
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <form id="myForm">
+          <div class="form-group">
+            <label for="nome">*Nome</label>
+            <input type="text" id="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email"  required>
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" min="6" max="6" required>
+          </div>
+          <div class="form-group">
+            <label for="confirm">*confirmação Senha</label>
+            <input type="password" id="confirm" min="6" max="6" required>
+          </div>
+          <div class="form-group">
+            <input class="send" type="submit" value="Enviar" id="submitButton">
+            <input  class="cancel" type="button" value="Cancelar" onclick="closePopup()">
+          </div>
+        </form>
+      </div>
+    </div>
+      
+      
+    <table id="myTable">
+      <!--Hierarquia de taeblas simples 
+             TABLE = tabela 
+             TABLE ROW = linha da tabela
+             TABLE DATA = dado da tabela-->
+     
+     
+             <tr class="first"><!--Primeira linha da tabela :)-->
+                 <br>
+                <br> <td>Nome</td>
+                 <td>Email</td>
+                 <td>telefone</td>
+                 <td>Deletar</td>
+                 
+     
+             </tr>
+     
+             <tr class="simples">
+                 <td>Sofia Souza</td>
+                 <td>20</td>
+                 <td>5</td>
+                 <td><button onclick="confirmarAcao(this)" class="apagar">Excluir</button></td>
+             </tr>
+             <tr class="colorido">
+               <td>Dexter</td>
+               <td>matematica</td>
+               <td></td>
+               <td><button onclick="confirmarAcao(this)" class="apagar">Excluir</button></td>
+              
+           </tr>
+           <tr class="simples">
+             <td>Sunny</td>
+             <td></td>
+             <td></td>
+             <td><button onclick="confirmarAcao(this)" class="apagar">Excluir</button></td>
+             
+         </tr>
+         <tr class="colorido">
+           <td>Peter Kavinsky </td>
+           <td></td>
+           <td></td>
+           <td><button onclick="confirmarAcao(this)" class="apagar">Excluir</button></td>
+         
+       </tr>
+     
+   
+              </table>
+  
+</div>
+
+
+
+  <script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+
+
+ 
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    document.getElementById("submitButton").addEventListener("click", function(event) {
+      event.preventDefault(); // Impede o envio do formulário
+
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var senha = document.getElementById("senha").value;
+      var confirm = document.getElementById("confirm").value;
+     
+
+      if (nome && email  &&
+          senha >= 6 && senha <= 6 &&
+          confirm >= 6 && confirm <= 6) {
+        // Todos os campos estão preenchidos corretamente
+        // Aqui você pode fazer algo com os valores do formulário ou enviá-los para um servidor
+        alert("Formulário enviado com sucesso!");
+        closePopup();
+      } else {
+        alert("Por favor, preencha todos os campos corretamente.");
+      }
+    });
+ 
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+
+    function confirmarAcao(botao) {
+      var resposta = confirm("Tem certeza de que deseja excluir esse cadastro?");
+
+      if (resposta) {
+        // Obtém a referência da linha da tabela a partir do botão
+        var linha = botao.parentNode.parentNode;
+        
+        // Remove a linha da tabela
+        linha.parentNode.removeChild(linha);
+
+        alert("Cadastro excluido");
+      } else {
+        alert("Cancelado");
+      }
+    }
+ 
+  </script>
+
+
+</body>
+
+</html>

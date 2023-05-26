@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/materias.css">
+
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="logo-details">
+      <a href="index.html">
+        <i class='bx bx-clipboard' style='color:#270027'  ></i>
+      </a>
+      <span class="logo_name">klist</span>
+    </div>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <a href="portugues.html">Português</a>
+    <br>
+    <a href="matematica.html">Matemática</a>
+    <br>
+    <a href="ingles.html">Inglês</a>
+    <a href="#">__________</a>
+    <br>
+    <a href="">Boletim</a>
+    <br>
+    <a href="">Gráfico</a>
+    <br>
+    <a href="">Alunos</a>
+    <br>
+    <a href="">AudioBook</a>
+    <br>
+    <a href="Newfunc.html">Novo funcionário</a>
+   
+
+  </div>
+
+  <div id="abrir">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  </div>
+  <br><br>
+   
+
+  <div class="batata">
+    
+    <div class="button-container">
+      <a href="matematica.html" class="button">
+        <img src="img/matG.svg" alt="Botão 1">
+      </a>
+      <a href="portugues.html" class="button">
+        <img src="img/portG.svg" alt="Botão 2">
+      </a>
+      <a href="ingles.html" class="button">
+        <img src="img/ingG.svg" alt="Botão 3">
+      </a>
+    </div>
+    
+      <!--Final dos botões-->
+
+    <h1 class="name"><strong>Matemática</strong></h1>
+
+    
+  
+    <button class="newUpdate" onclick="openPopup()">newUpdate</button>
+  
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <form id="myForm">
+          <div class="form-group">
+            <label for="estagio">Estágio:</label>
+            <input type="text" id="estagio" pattern="(ZI|ZII|7A|6A|5A|4A|3A|2A|A|AI|AII|B|BI|BII|C|CI|CII|D|DI|DII|E|EI|EII|F|FI|FII|G|GI|GII|H|HI|HII|I|II|III|J|JI|JII|K|KI|KII|L|M|N|P)" required>
+          </div>
+          <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" min="1" max="100" required>
+          </div>
+          <div class="form-group">
+            <label for="quantidade-usada">Quantidade Usada:</label>
+            <input type="number" id="quantidade-usada" min="1" max="100" required>
+          </div>
+          <div class="form-group">
+            <label for="quantidade-teste">Quantidade de Teste:</label>
+            <input type="number" id="quantidade-teste" min="1" max="50" required>
+          </div>
+          <div class="form-group">
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+          </div>
+          <div class="form-group">
+            <input class="send" type="submit" value="Enviar" id="submitButton">
+            <input  class="cancel" type="button" value="Cancelar" onclick="closePopup()">
+          </div>
+        </form>
+      </div>
+    </div>
+      
+      
+      <table>
+        <!--Hierarquia de taeblas simples 
+               TABLE = tabela 
+               TABLE ROW = linha da tabela
+               TABLE DATA = dado da tabela-->
+       
+       
+               <tr class="first"><!--Primeira linha da tabela :)-->
+                   <br>
+                  <br> <td>Estágio</td>
+                   <td>Quantidade</td>
+                   <td>Qtd. Usada</td>
+                   <td>Qtd. a Comprar</td>
+                   <td>Qtd. Teste</td>
+                   <td>Data Inventário</td>
+       
+               </tr>
+       
+               <tr class="simples">
+                   <td>ZI</td>
+                   <td>20</td>
+                   <td>5</td>
+                   <td>15</td>
+                   <td>50</td>
+                   <td>29/09/2005</td>
+               </tr>
+               <tr class="colorido">
+                 <td>ZII</td>
+                 <td>portugues</td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+             </tr>
+             <tr class="simples">
+               <td>6A</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+           <tr class="colorido">
+             <td>5A</td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+         </tr>
+         <tr class="simples">
+           <td>4A</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+       </tr>
+       <tr class="colorido">
+         <td>3A</td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+     </tr>
+     <tr class="simples">
+       <td>2A</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>A</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>B</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>C</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>D</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>E</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+     <tr class="simples">
+       <td>F</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>G</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>H</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>I</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>J</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>K</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>L</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>M</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>N</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>O</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>ZII</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="colorido">
+       <td>ZII</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     <tr class="simples">
+       <td>ZII</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+     
+                </table>
+  
+</div>
+
+
+
+  <script>
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+
+
+ 
+    function openPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    document.getElementById("submitButton").addEventListener("click", function(event) {
+      event.preventDefault(); // Impede o envio do formulário
+
+      var estagio = document.getElementById("estagio").value;
+      var quantidade = document.getElementById("quantidade").value;
+      var quantidadeUsada = document.getElementById("quantidade-usada").value;
+      var quantidadeTeste = document.getElementById("quantidade-teste").value;
+      var data = document.getElementById("data").value;
+
+      if (estagio.match(/[A-Oa-o]{1}/) && quantidade >= 1 && quantidade <= 20 &&
+          quantidadeUsada >= 1 && quantidadeUsada <= 20 &&
+          quantidadeTeste >= 1 && quantidadeTeste <= 10 && data) {
+        // Todos os campos estão preenchidos corretamente
+        // Aqui você pode fazer algo com os valores do formulário ou enviá-los para um servidor
+        alert("Formulário enviado com sucesso!");
+        closePopup();
+      } else {
+        alert("Por favor, preencha todos os campos corretamente.");
+      }
+    });
+ 
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+
+
+</body>
+
+</html>
